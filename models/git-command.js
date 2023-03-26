@@ -34,6 +34,10 @@ class GitCommand {
         /*
             Create logic here then run unit testing. Make sure that they all pass before sending PR.
         */
+        else if(path_file == "."){
+                this.staging.push(modified_files);
+                this.working_directory.new_changes = {};
+        }
         else{
             return `Failed to add ${path_file}! File is not modified or missing.`;
         }
