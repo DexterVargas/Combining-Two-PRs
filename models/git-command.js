@@ -32,8 +32,8 @@ class GitCommand {
             delete modified_files[path_file];
         }
         else if(path_file == "."){
-                this.staging.push(modified_files);
-                this.working_directory.new_changes = {};
+            this.staging.push(modified_files);
+            this.working_directory.new_changes = {};
         }
         else{
             return `Failed to add ${path_file}! File is not modified or missing.`;
